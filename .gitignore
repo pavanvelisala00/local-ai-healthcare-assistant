@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+models/*.gguf
+models/*.bin
+*.safetensors
+.DS_Store
+.vscode/
+.idea/
