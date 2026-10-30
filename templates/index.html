@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>CareGuard AI — Local Healthcare Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">LOCAL AI · SAFETY-FIRST LEARNING PROJECT</p>
+      <h1>CareGuard <span>AI</span></h1>
+      <p class="subtitle">A local AI assistant for general health information, with basic safety checks.</p>
+    </header>
+
+    <section class="notice" role="note">
+      <strong>Educational prototype only.</strong> Not medical advice, not clinically validated, and not for emergencies. Contact local emergency services for urgent symptoms.
+    </section>
+
+    <section class="chat-card" aria-label="Chat with the assistant">
+      <div class="chat-heading">
+        <div><span class="status-dot"></span><strong>Assistant session</strong></div>
+        <span class="local-label">LOCAL MODEL</span>
+      </div>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="message assistant-message">Hello! I can share general health information. What would you like to understand?</div>
+      </div>
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="message-input">Your question</label>
+        <textarea id="message-input" rows="2" maxlength="1200" placeholder="Ask a general health question…" required></textarea>
+        <button id="send-button" type="submit">Send <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="hint">Avoid sharing personal identifying or sensitive medical information.</p>
+    </section>
+    <footer>Built as an educational project exploring local inference and responsible AI guardrails.</footer>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
